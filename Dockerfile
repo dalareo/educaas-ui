@@ -15,7 +15,6 @@ RUN /env/bin/python /app/manage.py create_db
 RUN /env/bin/python /app/manage.py db init
 RUN /env/bin/python /app/manage.py db migrate
 
-
 VOLUME ["/opt/docker-compose-projects"]
 
 COPY demo-projects /opt/docker-compose-projects
