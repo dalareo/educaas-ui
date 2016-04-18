@@ -2,7 +2,6 @@ educaas_ui:
     restart: always
     build: .
     container_name: educaas_ui
-    hostname: educaas_ui
     ports:
         - 5000:5000
     volumes:
