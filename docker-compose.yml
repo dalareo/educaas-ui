@@ -1,7 +1,6 @@
 educaas_ui:
     restart: always
     build: .
-    container_name: educaas_ui
     links:
       - database
     ports:
