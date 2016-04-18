@@ -15,7 +15,6 @@ ADD . /app
 RUN /env/bin/python /app/manage.py create_db
 RUN /env/bin/python /app/manage.py db init
 RUN /env/bin/python /app/manage.py db migrate
-RUN /env/bin/python /app/manage.py create_admin
 
 VOLUME ["/opt/docker-compose-projects"]
 
