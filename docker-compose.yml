@@ -1,8 +1,8 @@
-docker_compose_ui:
+educaas_ui:
     restart: always
     build: .
-    container_name: docker_compose_ui
-    hostname: docker_compose_ui
+    container_name: educaas_ui
+    hostname: educaas_ui
     ports:
         - 5000:5000
     volumes:
