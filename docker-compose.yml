@@ -3,12 +3,13 @@ educaas_ui:
     build: .
     container_name: educaas_ui
     links:
-        - db
+      - database
     ports:
-        - 5000:5000
+      - 5000:5000
     volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-        #- /home/user/docker-compose-ui/demo-projects:/opt/docker-compose-projects
+      - /var/run/docker.sock:/var/run/docker.sock
+      #- /home/user/docker-compose-ui/demo-projects:/opt/docker-compose-projects
+    command: bash -c "/env/bin/python manage.py create_db && /env/bin/python manage.py db init && /env/bin/python manage.py db migrate"
 
-db:
-    image: postgres
+database:
+    image: postgres:9.4

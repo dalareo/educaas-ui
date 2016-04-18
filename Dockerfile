@@ -12,9 +12,9 @@ ADD requirements.txt /app/requirements.txt
 RUN /env/bin/pip install -r requirements.txt
 ADD . /app
 
-RUN /env/bin/python /app/manage.py create_db
-RUN /env/bin/python /app/manage.py db init
-RUN /env/bin/python /app/manage.py db migrate
+# RUN /env/bin/python /app/manage.py create_db
+# RUN /env/bin/python /app/manage.py db init
+# RUN /env/bin/python /app/manage.py db migrate
 
 VOLUME ["/opt/docker-compose-projects"]
 
@@ -22,4 +22,4 @@ COPY demo-projects /opt/docker-compose-projects
 
 EXPOSE 5000
 
-CMD ["/env/bin/python", "/app/manage.py", "runserver"]
+# CMD ["/env/bin/python", "/app/manage.py", "runserver"]
