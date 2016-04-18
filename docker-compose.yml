@@ -9,7 +9,10 @@ educaas_ui:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       #- /home/user/docker-compose-ui/demo-projects:/opt/docker-compose-projects
-    command: bash -c "/env/bin/python manage.py create_db && /env/bin/python manage.py db init && /env/bin/python manage.py db migrate"
+    #command: bash -c "/env/bin/python /app/manage.py create_db"
+    #command: bash -c "/env/bin/python /app/manage.py db init"
+    #command: bash -c "/env/bin/python /app/manage.py db migrate"
+    entrypoint: bash -c "/env/bin/python /app/manage.py runserver"
 
 database:
     image: postgres:9.4
