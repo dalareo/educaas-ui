@@ -1,9 +1,18 @@
 educaas_ui:
     restart: always
     build: .
-    container_name: educaas_ui
+    links:
+      - database
     ports:
-        - 5000:5000
+      - 5000:5000
     volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-        #- /home/user/docker-compose-ui/demo-projects:/opt/docker-compose-projects
+      - /var/run/docker.sock:/var/run/docker.sock
+      #- /home/user/docker-compose-ui/demo-projects:/opt/docker-compose-projects
+    #following commands need to be run in a bash inside running container
+    #command: bash -c "/env/bin/python /app/manage.py create_db"
+    #command: bash -c "/env/bin/python /app/manage.py db init"
+    #command: bash -c "/env/bin/python /app/manage.py db migrate"
+    entrypoint: bash -c "/env/bin/python /app/manage.py runserver --host 0.0.0.0"
+
+database:
+    image: postgres
