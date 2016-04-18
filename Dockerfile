@@ -11,6 +11,7 @@ RUN virtualenv /env
 ADD requirements.txt /app/requirements.txt
 RUN /env/bin/pip install -r requirements.txt
 ADD . /app
+
 RUN /env/bin/python /app/manage.py create_db
 RUN /env/bin/python /app/manage.py db init
 RUN /env/bin/python /app/manage.py db migrate

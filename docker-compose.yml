@@ -2,9 +2,13 @@ educaas_ui:
     restart: always
     build: .
     container_name: educaas_ui
-    hostname: educaas_ui
+    links:
+        - db
     ports:
         - 5000:5000
     volumes:
         - /var/run/docker.sock:/var/run/docker.sock
         #- /home/user/docker-compose-ui/demo-projects:/opt/docker-compose-projects
+
+db:
+    image: postgres
