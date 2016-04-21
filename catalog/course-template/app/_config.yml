@@ -1,0 +1,30 @@
+encoding: utf-8
+markdown: redcarpet
+baseurl: /jekyll-course-template
+url: p2pu.github.io/jekyll-course-template/
+permalink: /:title/
+ga_tracking_code: UA-5757664-17
+disqus_shortname: jekyllcoursetemplate
+prose:
+  media: /img
+  ignore:
+    - /_includes
+    - /_layouts
+    - /_sass
+    - /fonts
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "course_page"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "content"
