@@ -18,7 +18,7 @@ ADD . /app
 
 VOLUME ["/opt/docker-compose-projects"]
 
-COPY demo-projects /opt/docker-compose-projects
+COPY catalog /opt/docker-compose-projects
 
 EXPOSE 5000
 

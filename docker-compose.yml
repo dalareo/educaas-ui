@@ -7,7 +7,7 @@ educaas_ui:
       - 5000:5000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      #- /home/user/docker-compose-ui/demo-projects:/opt/docker-compose-projects
+      #- /home/user/docker-compose-ui/catalog:/opt/docker-compose-projects
     #following commands need to be run in a bash inside running container
     #command: bash -c "/env/bin/python /app/manage.py create_db"
     #command: bash -c "/env/bin/python /app/manage.py db init"
