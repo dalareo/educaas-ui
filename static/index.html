@@ -16,12 +16,12 @@
   <body ng-app="composeUiApp">
 
     <div class="container" ng-controller="MainCtrl">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="NavCtrl" ng-hide="isActive('/login')">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="NavCtrl" ng-hide="isActive('/login') || isActive('/register')">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
             <span class="sr-only">Toggle navigation</span>
           </button>
-          <a class="navbar-brand" href="#">EduCaaS UI</a>
+          <a class="navbar-brand" href="#/">EduCaaS UI</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
           <ul class="nav navbar-nav">
