@@ -1,6 +1,6 @@
-# Docker Compose demo projects
+# EduCaaS Catalog
 
-This directory contains several Docker Compose sample projects showing basic docker/docker-compose capabilities such as port publishing, container linking, volume mounting.
+This directory contains several Docker Compose sample projects showing basic docker/docker-compose capabilities such as file hosting, group chat, blogging.
 
 Note that some of the services provided by these projects are not "scalable" with `docker-compose scale SERVICE=NUM` because of port publish conflicts.
 

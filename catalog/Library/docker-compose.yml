@@ -1,0 +1,4 @@
+owncloud:
+  image: owncloud
+  ports:
+  - 8000:80

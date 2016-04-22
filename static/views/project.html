@@ -3,24 +3,24 @@
 </div>
 
 <div class="col-md-4">
-  <h3>Projects</h3>
+  <h3>Apps Catalogue</h3>
   <div class="btn-group-vertical projects">
     <a ng-repeat="(id, path) in projects.projects | filterByName:query" class="btn btn-default btn-block" ng-class="{active: activeProject === id}" ng-click="$parent.activeProject = id" ng-href="#/project/{{id}}">{{id}}</a>
   </div>
   <div class="vertical-margin" ng-hide="isEmpty(projects.projects)">
     <form class="form-inline">
       <div class="form-group">
-        <label for="project-filter">filter by project name:</label>
+        <label for="project-filter">search more apps:</label>
         <input name="project-filter" type="text" ng-model="query" class="form-control">
       </div>
     </form>
   </div>
   <div ng-show="isEmpty(projects.projects)" class="vertical-margin">
-    no projects configured, please run the container with the option
+    no apps configured, please run the container with the option
     <pre>-v /home/user/docker-compose-ui/catalog:/opt/docker-compose-projects:ro</pre>
   </div>
-  <button class="btn btn-default btn-block" ng-click="reload()"><i class="glyphicon glyphicon-refresh"></i> Reload projects</button>
-  <a class="btn btn-default btn-block" ng-href="/#/create"><i class="glyphicon glyphicon-plus"></i> Create new project</a>
+  <button class="btn btn-default btn-block" ng-click="reload()"><i class="glyphicon glyphicon-refresh"></i> Reload apps</button>
+  <a class="btn btn-default btn-block" ng-href="/#/create"><i class="glyphicon glyphicon-plus"></i> Create new apps</a>
   <a class="btn btn-primary btn-block" ng-href="#/"><i class="glyphicon glyphicon-wrench"></i> Settings</a>
 </div>
 <div class="col-md-8">

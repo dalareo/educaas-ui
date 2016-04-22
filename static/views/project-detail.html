@@ -1,4 +1,4 @@
-  <h3>{{projectId}}</h3>
+<h3>{{projectId}}</h3>
 
 <p>
   <button class="btn btn-sm btn-info" ng-hide="ymlData" ng-click="yml()">view docker-compose.yml</button>
@@ -17,7 +17,7 @@
 <br><br>
 
 <div ng-hide="working">
-  <h4>Services</h4>
+  <h4>Deployed Services</h4>
 
   <div ng-repeat="(id, service) in services">
     <div class="row">
@@ -48,6 +48,7 @@
             <span ng-show="container.is_running">
               <h6 ng-show="container.ports"><span class="glyphicon glyphicon glyphicon-transfer"></span> Network</h6>
               <p ng-repeat="(internal, host) in container.ports">
+                <a href ng-click="$location.host + {{mapping.HostPort}}">Click</a>
                 <span ng-hide="host">{{internal}}</span>
                 <span ng-repeat="mapping in host">
                   {{mapping.HostPort}} : {{internal}}

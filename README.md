@@ -1,8 +1,8 @@
-![Docker Compose UI](https://raw.githubusercontent.com/francescou/docker-compose-ui/master/static/images/logo.png)
+![EduCaaS UI](https://raw.githubusercontent.com/francescou/docker-compose-ui/master/static/images/logo.png)
 
 ## What is it
 
-Docker Compose UI is a web interface for Docker Compose.
+EduCaaS UI is an easy-to-use web interface for EduCaaS services.
 
 ![screenshot project detail](https://raw.githubusercontent.com/francescou/docker-compose-ui/master/screenshots/project-detail.png)
 
@@ -129,5 +129,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
