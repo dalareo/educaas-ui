@@ -1,5 +1,3 @@
-![EduCaaS UI](https://raw.githubusercontent.com/francescou/docker-compose-ui/master/static/images/logo.png)
-
 ## What is it
 
 EduCaaS UI is an easy-to-use web interface for EduCaaS services.
