@@ -111,3 +111,7 @@ footer {
   margin-top: 5px;
   margin-right: 10px;
 }
+
+.ng-scope .row {
+  margin-top: 30px;
+}

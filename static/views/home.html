@@ -1,5 +1,5 @@
 <div class="col-md-4">
-  <h3>Education Apps</h3>
+  <h3>Team Apps</h3>
   <div class="btn-group-vertical projects">
     <a ng-repeat="(id, path) in projects.projects | filterByName:query" class="btn btn-default btn-block" ng-class="{active: activeProject === id}" ng-click="$parent.activeProject = id" ng-href="#/project/{{id}}">{{id}}</a>
   </div>
@@ -17,7 +17,7 @@
   </div>
   <button class="btn btn-default btn-block" ng-click="reload()"><i class="glyphicon glyphicon-refresh"></i> Reload catalog</button>
   <a class="btn btn-default btn-block" ng-href="/#/create"><i class="glyphicon glyphicon-plus"></i> Create new app</a>
-  <a class="btn btn-primary btn-block" ng-href="#/"><i class="glyphicon glyphicon-wrench"></i> Settings</a>
+  <a class="btn btn-primary btn-block hidden" ng-href="#/"><i class="glyphicon glyphicon-wrench"></i> Settings</a> <!-- temporal hack -->
 </div>
 <div class="col-md-8 hidden"> <!-- temporal hack -->
 
