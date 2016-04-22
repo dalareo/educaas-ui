@@ -16,19 +16,41 @@
   <body ng-app="composeUiApp">
 
     <div class="container" ng-controller="MainCtrl">
-        <div class="row text-center">
-          <a href="#"><img src="images/logo.png" alt="Docker Compose UI"></a>
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="NavCtrl" ng-hide="isActive('/login')">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#">EduCaaS UI</a>
         </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+          <ul class="nav navbar-nav">
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/create">New App</a></li>
+          </ul>
+          <form class="hidden navbar-form navbar-right" action="#" role="search"> <!-- temporal hack -->
+            <div class="form-group">
+              <div class="input-group">
+                <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn"><span class="fui-search"></span></button>
+                </span>
+              </div>
+            </div>
+          </form>
+          <button id="logout-button" ng-controller="logoutController" ng-click='logout()' class="navbar-right btn btn-default">Logout</button>
+        </div><!-- /.navbar-collapse -->
+      </nav><!-- /navbar -->
 
-        <div ng-view="" class="row text-center">
+      <div ng-view="" class="row text-center">
 
-        </div>
+      </div>
 
-        <footer class="text-center">
-            <small class="text-muted"><a
+      <footer class="text-center">
+          <small class="text-muted"><a
                 href="https://github.com/dalareo/educaas-ui">EduCaaS
                  UI v.0.1</a>  Licensed under the MIT license.</small>
-        </footer>
+      </footer>
     </div>
 
 
@@ -49,6 +71,7 @@
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/logout.js"></script>
     <script src="scripts/controllers/register.js"></script>
+    <script src="scripts/controllers/navbar.js"></script>
     <script src="scripts/directives/actions.js"></script>
     <script src="scripts/directives/project-detail.js"></script>
     <script src="scripts/directives/modal.js"></script>
