@@ -24,7 +24,7 @@ Run the following command in terminal:
     docker run \
     --name docker-compose-ui \
     -p 5000:5000 \
-    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /var/run/docker.angusock:/var/run/docker.sock \
     francescou/docker-compose-ui:0.15
 
 or, if you already have docker-compose installed, just `docker-compose up`.
