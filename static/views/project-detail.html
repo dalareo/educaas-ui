@@ -1,9 +1,11 @@
 <h3>{{projectId}}</h3>
 
-<p>
+<p data-step="1" data-intro="Provisioning details">
   <button class="btn btn-sm btn-info" ng-hide="ymlData" ng-click="yml()">view docker-compose.yml</button>
   <button class="btn btn-sm btn-info" ng-show="ymlData" ng-click="ymlData = null">close docker-compose.yml</button>
 </p>
+
+<div data-step="2" data-intro="Actions to execute with the container. Click UP to deploy and DOWN to remove. This actions are temporal features only."></div>
 
 <pre class="text-left" ng-show="ymlData">
   {{ymlData}}
@@ -47,7 +49,7 @@
             </ul>
             <span ng-show="container.is_running">
               <h6 ng-show="container.ports"><span class="glyphicon glyphicon glyphicon-transfer"></span> Network</h6>
-              <p ng-repeat="(internal, host) in container.ports">
+              <p data-step="3" data-intro="Get the URL of the app from here to test the deployment. Just append the number of the port to the URL. Ex. educaas.fricolab.com:8080 for the Blog" ng-repeat="(internal, host) in container.ports">
                 <a href ng-click="$location.host + {{mapping.HostPort}}">Click</a>
                 <span ng-hide="host">{{internal}}</span>
                 <span ng-repeat="mapping in host">

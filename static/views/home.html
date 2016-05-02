@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <h3>Team Apps</h3>
-  <div class="btn-group-vertical projects">
+  <div data-step="1" data-intro="Web apps available for the team. Just click on them to see the details" class="btn-group-vertical projects">
     <a ng-repeat="(id, path) in projects.projects | filterByName:query" class="btn btn-default btn-block" ng-class="{active: activeProject === id}" ng-click="$parent.activeProject = id" ng-href="#/project/{{id}}">{{id}}</a>
   </div>
   <div class="vertical-margin" ng-hide="isEmpty(projects.projects)">
@@ -16,7 +16,7 @@
     <pre>-v /home/user/docker-compose-ui/catalog:/opt/docker-compose-projects:ro</pre>
   </div>
   <button class="btn btn-default btn-block" ng-click="reload()"><i class="glyphicon glyphicon-refresh"></i> Reload catalog</button>
-  <a class="btn btn-default btn-block" ng-href="/#/create"><i class="glyphicon glyphicon-plus"></i> Create new app</a>
+  <a data-step="2" data-intro="Add more apps from the public catalog" class="btn btn-default btn-block" ng-href="/#/create"><i class="glyphicon glyphicon-plus"></i> Create new app</a>
   <a class="btn btn-primary btn-block hidden" ng-href="#/"><i class="glyphicon glyphicon-wrench"></i> Settings</a> <!-- temporal hack -->
 </div>
 <div class="col-md-8 hidden"> <!-- temporal hack -->

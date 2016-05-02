@@ -6,7 +6,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.1.0/introjs.min.css">
     <link rel="stylesheet" href="https://rawgithub.com/fabien-d/alertify.js/0.3.11/themes/alertify.core.css">
     <link rel="stylesheet" href="https://rawgithub.com/fabien-d/alertify.js/0.3.11/themes/alertify.default.css">
     <link rel="stylesheet" href="https://rawgithub.com/designmodo/Flat-UI/2.2.2/dist/css/flat-ui.min.css">
@@ -27,6 +28,8 @@
           <ul class="nav navbar-nav">
             <li><a href="#/">Home</a></li>
             <li><a href="#/create">New App</a></li>
+            <li><a href="javascript:void(0);" onclick="javascript:introJs().start();">Toggle the step-by-step tutorial</a></li>
+
           </ul>
           <form class="hidden navbar-form navbar-right" action="#" role="search"> <!-- temporal hack -->
             <div class="form-group">
@@ -61,6 +64,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.1.0/intro.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/filters/filters.js"></script>
     <script src="scripts/controllers/main.js"></script>

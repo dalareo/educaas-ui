@@ -1,5 +1,6 @@
 <div class="col-md-4 col-md-offset-4">
   <h1>Welcome to EduCaaS</h1>
+  <a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Toggle the step-by-step tutorial</a>
   <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
   <form class="form" ng-submit="login()">
     <div class="form-group">
@@ -10,7 +11,7 @@
       <label>Password</label>
         <input type="password" class="form-control" name="password" ng-model="loginForm.password" required>
       </div>
-      <div>
+      <div data-step="1" data-intro="Sign up and then log in">
         <button type="submit" class="btn btn-default" ng-disabled="disabled">Login</button>
         <a class="btn btn-default" ng-disabled="disabled" href="#/register">Sign Up</a>
       </div>
